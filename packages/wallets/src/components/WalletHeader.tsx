@@ -5,7 +5,8 @@ import {
   ConfirmDialog,
   useOpenDialog,
   DropdownActions,
-} from '@chia/core';
+  useShowDebugInformation,
+} from '@hddcoin/core';
 import {
   Typography,
   ListItemIcon,
@@ -18,6 +19,7 @@ import {
 } from '@mui/icons-material';
 import { useDeleteUnconfirmedTransactionsMutation } from '@chia/api-react';
 import WalletName from './WalletName';
+import WalletStatus from './WalletStatus';
 
 type StandardWalletProps = {
   walletId: number;
@@ -29,6 +31,7 @@ type StandardWalletProps = {
 export default function WalletHeader(props: StandardWalletProps) {
   const { walletId, actions, tab, onTabChange } = props;
   const openDialog = useOpenDialog();
+  const showDebugInformation = useShowDebugInformation();
   const [deleteUnconfirmedTransactions] = useDeleteUnconfirmedTransactionsMutation();
 
   async function handleDeleteUnconfirmedTransactions() {
@@ -61,7 +64,7 @@ export default function WalletHeader(props: StandardWalletProps) {
           </Tabs>
         </Flex>
         <Flex gap={1} alignItems="center">
-          {/*
+          {
           <Flex alignItems="center">
             <Typography variant="body1" color="textSecondary">
               <Trans>Status:</Trans>
@@ -69,7 +72,7 @@ export default function WalletHeader(props: StandardWalletProps) {
             &nbsp;
             <WalletStatus height={showDebugInformation} />
           </Flex>
-          */}
+          }
 
           <DropdownActions label={<Trans>Actions</Trans>} variant="outlined">
             {({ onClose }) => (

@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { Flex } from '@chia/core';
+import { Flex, useShowDebugInformation } from '@hddcoin/core';
 import WalletHistory from '../WalletHistory';
 import WalletStandardCards from './WalletStandardCards';
 import WalletReceiveAddress from '../WalletReceiveAddress';
 import WalletSend from '../WalletSend';
 import WalletHeader from '../WalletHeader';
+import WalletConnections from '../WalletConnections';
 
 type StandardWalletProps = {
   walletId: number;
@@ -12,7 +13,7 @@ type StandardWalletProps = {
 
 export default function StandardWallet(props: StandardWalletProps) {
   const { walletId } = props;
-  // const showDebugInformation = useShowDebugInformation();
+  const showDebugInformation = useShowDebugInformation();
   const [selectedTab, setSelectedTab] = useState<'summary' | 'send' | 'receive'>('summary');
 
   return (
@@ -36,11 +37,9 @@ export default function StandardWallet(props: StandardWalletProps) {
         <WalletReceiveAddress walletId={walletId} />
       )}
 
-      {/*
       {showDebugInformation && (
         <WalletConnections walletId={walletId} />
       )}
-      */}
     </Flex>
   );
 }
