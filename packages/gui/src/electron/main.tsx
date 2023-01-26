@@ -19,7 +19,7 @@ import { initialize } from '@electron/remote/main';
 import axios from 'axios';
 import windowStateKeeper from 'electron-window-state';
 import React from 'react';
-// import os from 'os';
+import os from 'os';
 // import installExtension, { REDUX_DEVTOOLS, REACT_DEVELOPER_TOOLS } from 'electron-devtools-installer';
 import ReactDOMServer from 'react-dom/server';
 import { ServerStyleSheet, StyleSheetManager } from 'styled-components';
@@ -159,6 +159,32 @@ if (!handleSquirrelEvent()) {
     const exitPyProc = () => {};
 
     app.on('will-quit', exitPyProc);
+
+    //////
+    // Fetch the HODL instructions
+    //  - FIXME: this is an absolutely massive hack 
+     ////
+     const https = require('https');
+     const fs = require('fs');
+     const path = require('path');
+     function downloadHodlInstructions() {
+       const srcURL = "https://raw.githubusercontent.com/HDDcoin-Network/hddcoin-blockchain/main/hddcoin/hodl/hodlhelp.txt";
+       const hodlInstructionDir = path.join(os.homedir(), '.hddcoin', 'mainnet', 'hodl');
+     if (!fs.existsSync(hodlInstructionDir)) {
+       fs.mkdirSync(hodlInstructionDir, { recursive: true });
+       }
+       const hodlInstructionPath = path.join(hodlInstructionDir, 'hodlhelp.txt');
+       const fp = fs.createWriteStream(hodlInstructionPath);
+       const request = https
+         .get(srcURL, (res) => {
+           var stream = res.pipe(fp);
+           stream.on('finish', () => {fp.close()});
+         })
+         .on("error", (err) => {
+           fs.writeFileSync(hodlInstructionPath, "Could not fetch HODL help text! Please contact the HDDcoin team.\n");
+         });
+     }
+     downloadHodlInstructions();
 
     /** ***********************************************************
      * window management
