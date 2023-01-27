@@ -2,10 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 import { Trans } from '@lingui/macro';
 import { useHistory } from 'react-router-dom';
-import { Flex, Link, CardHero } from '@hddcoin-network/core';
+import { Flex, Link, CardHero } from '@chia-network/core';
 import { Button, Grid, Typography, Divider } from '@mui/material';
 import useOpenExternal from '../../hooks/useOpenExternal';
-import { HDDappsHODLHero as HDDappsHODLHeroIcon } from '@hddcoin-network/icons';
+import { HDDappsHODLHero as HDDappsHODLHeroIcon } from '@chia-network/icons';
 
 const StyledHDDappsIcon = styled(HDDappsHODLHeroIcon)`
   font-size: 4rem;

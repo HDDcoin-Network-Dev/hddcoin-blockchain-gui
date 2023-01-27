@@ -1,6 +1,6 @@
 import * as React from 'react';
 import DashboardTitle from '../dashboard/DashboardTitle';
-import { Flex } from '@hddcoin-network/core';
+import { Flex } from '@chia-network/core';
 import { Paper, Grid } from '@mui/material';
 import styled from 'styled-components';
 import { existsSync, readFileSync } from 'fs';

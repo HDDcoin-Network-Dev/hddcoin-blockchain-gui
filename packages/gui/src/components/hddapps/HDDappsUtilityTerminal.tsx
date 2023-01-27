@@ -1,6 +1,6 @@
 import * as React from 'react';
 import DashboardTitle from '../dashboard/DashboardTitle';
-import { Flex } from '@hddcoin-network/core';
+import { Flex } from '@chia-network/core';
 import { Grid, Link } from '@mui/material';
 import { Terminal } from "xterm";
 import { FitAddon } from "xterm-addon-fit";

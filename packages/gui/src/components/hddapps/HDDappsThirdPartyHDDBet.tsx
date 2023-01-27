@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Trans } from '@lingui/macro';
 import { useHistory } from 'react-router-dom';
-import { Flex, Link, CardHero } from '@hddcoin-network/core';
+import { Flex, Link, CardHero } from '@chia-network/core';
 import { Button, Grid, Typography, Divider } from '@mui/material';
 import useOpenExternal from '../../hooks/useOpenExternal';
 import { HDDappsThirdPartyHDDBetHero as HDDappsThirdPartyHDDBetHeroIcon } from '../../../../icons/src';

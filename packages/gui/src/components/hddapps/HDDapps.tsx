@@ -1,4 +1,4 @@
-import { Flex, LayoutDashboardSub } from '@hddcoin-network/core';
+import { Flex, LayoutDashboardSub } from '@chia-network/core';
 import React from 'react';
 import { Route, Switch, useRouteMatch } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
@@ -44,11 +44,11 @@ export default function HDDapps() {
 				
 				  <Grid container spacing={4} alignItems="stretch">
 				  
-					/* 
+					{/* 
 					<Grid item xs={12} sm={6} md={6}>
 					  <HDDappsHODL headerTag={HDDappsHeaderSource} />
 					</Grid> 
-					*/
+					*/}
 					
 					<Grid item xs={12} sm={6} md={6}>
 					  <HDDappsOnlineStore headerTag={HDDappsHeaderSource} />
@@ -62,11 +62,11 @@ export default function HDDapps() {
 					  <HDDappsExchangeTrading headerTag={HDDappsHeaderSource} />
 					</Grid>
 					
-					/* 
+					{/* 
 					<Grid item xs={12} sm={6} md={6}>
 					  <HDDappsUtility headerTag={HDDappsHeaderSource} />
 					</Grid> 
-					*/
+					*/}
 					
 					<Grid item xs={12} sm={6} md={6}>
 					  <HDDappsApplications headerTag={HDDappsHeaderSource} />
@@ -86,7 +86,7 @@ export default function HDDapps() {
 				
 			  </Route>
 			  
-			  /* 
+			  {/* 
 			  <Route path={`${path}/hodlterminal`} exact>
 				<HDDappsHODLTerminal />
 			  </Route>
@@ -98,7 +98,7 @@ export default function HDDapps() {
 			  <Route path={`${path}/utilitylogs`} exact>
 				<HDDappsUtilityLogs />
 			  </Route> 
-			  */
+				*/}
 			  
 			</Switch>
 

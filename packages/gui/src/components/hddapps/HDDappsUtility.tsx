@@ -2,9 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import { Trans } from '@lingui/macro';
 import { useHistory } from 'react-router-dom';
-import { Flex, CardHero } from '@hddcoin-network/core';
+import { Flex, CardHero } from '@chia-network/core';
 import { Button, Grid, Typography, Divider } from '@mui/material';
-import { HDDappsUtilityHero as HDDappsUtilityHeroIcon } from '@hddcoin-network/icons';
+import { HDDappsUtilityHero as HDDappsUtilityHeroIcon } from '@chia-network/icons';
 
 const StyledHDDappsIcon = styled(HDDappsUtilityHeroIcon)`
   font-size: 4rem;
