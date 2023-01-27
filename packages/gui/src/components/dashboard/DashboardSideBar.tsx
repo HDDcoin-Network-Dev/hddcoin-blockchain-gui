@@ -98,20 +98,20 @@ export default function DashboardSideBar(props: DashboardSideBarProps) {
               title={<Trans>Farming</Trans>}
               data-testid="DashboardSideBar-farming"
             />
-			/* 
+			      {/* 
             <SideBarItem
               to="/dashboard/pool"
               icon={PoolingIcon}
               title={<Trans>Pooling</Trans>}
               data-testid="DashboardSideBar-pooling"
             />
-			*/
-			<SideBarItem
-			  to="/dashboard/hddapps"
-			  icon={HDDappsIcon}
-			  title={<Trans>HDD Apps</Trans>}
-			  data-testid="DashboardSideBar-hddapps"
-			/>
+			      */}
+            <SideBarItem
+              to="/dashboard/hddapps"
+              icon={HDDappsIcon}
+              title={<Trans>HDD Apps</Trans>}
+              data-testid="DashboardSideBar-hddapps"
+            />
           </>
         )}
       </StyledItemsContainer>
