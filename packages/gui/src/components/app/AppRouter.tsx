@@ -15,6 +15,7 @@ import Settings from '../settings/Settings';
 import SettingsPanel from '../settings/SettingsPanel';
 import AppProviders from './AppProviders';
 import AppStatusHeader from './AppStatusHeader';
+import HDDapps from '../hddapps/HDDapps';
 
 export default function AppRouter() {
   const [mode] = useMode();
@@ -68,6 +69,7 @@ export default function AppRouter() {
               <Route path="dashboard/plot/*" element={<Plot />} />
               <Route path="dashboard/farm/*" element={<Farm />} />
               <Route path="dashboard/pool/*" element={<Pool />} />
+              <Route path="dashboard/hddapps/*" element={<HDDapps />} />
             </Route>
           )}
         </Route>
