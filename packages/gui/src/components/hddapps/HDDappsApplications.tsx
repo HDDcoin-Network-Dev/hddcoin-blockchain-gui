@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Trans } from '@lingui/macro';
-import { useHistory } from 'react-router-dom';
+// import { useHistory } from 'react-router-dom';
 import { Flex, Link, CardHero } from '@chia-network/core';
 import { Button, Grid, Typography, Divider } from '@mui/material';
 import useOpenExternal from '../../hooks/useOpenExternal';
@@ -12,7 +12,7 @@ const StyledHDDappsIcon = styled(HDDappsApplicationsHeroIcon)`
 `;
 
 export default function HDDappsApplications() {
-  const history = useHistory();
+  // const history = useHistory();
   const openExternal = useOpenExternal();
 
   function hddAppsURLbuttonClickExplorer() {

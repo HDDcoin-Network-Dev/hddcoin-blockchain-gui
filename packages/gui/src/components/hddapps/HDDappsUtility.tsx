@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Trans } from '@lingui/macro';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 import { Flex, CardHero } from '@chia-network/core';
 import { Button, Grid, Typography, Divider } from '@mui/material';
 import { HDDappsUtilityHero as HDDappsUtilityHeroIcon } from '@chia-network/icons';
@@ -11,14 +11,14 @@ const StyledHDDappsIcon = styled(HDDappsUtilityHeroIcon)`
 `;
 
 export default function HDDappsUtility() {
-  const history = useHistory();
+  const navigate = useNavigate();
 
    function hddAppsOpenTerminal() {
-	history.push('/dashboard/hddapps/utilityterminal');
+	  navigate('/dashboard/hddapps/utilityterminal');
   }
   
    function hddAppsOpenLogs() {
-	history.push('/dashboard/hddapps/utilitylogs');
+	  navigate('/dashboard/hddapps/utilitylogs');
   }
   
   return (

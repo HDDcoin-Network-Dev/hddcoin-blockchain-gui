@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Trans } from '@lingui/macro';
-import { useHistory } from 'react-router-dom';
+import { useNavigate} from 'react-router';
 import { Flex, Link, CardHero } from '@chia-network/core';
 import { Button, Grid, Typography, Divider } from '@mui/material';
 import useOpenExternal from '../../hooks/useOpenExternal';
@@ -12,7 +12,7 @@ const StyledHDDappsIcon = styled(HDDappsHODLHeroIcon)`
 `;
 
 export default function HDDappsHODL() {
-  const history = useHistory();
+  const navigate = useNavigate();
   const openExternal = useOpenExternal();
 
   function hddAppsURLbuttonClickHODL() {
@@ -20,8 +20,7 @@ export default function HDDappsHODL() {
         }
   
    function hddAppsOpenHODLTerminal() {
-    history.push('/dashboard/hodlterminal/HODLterminal');
-    // history.push('/dashboard/hddapps/hodlterminal');
+    navigate('/dashboard/hodlterminal/HODLterminal');
   }
   
   return (
