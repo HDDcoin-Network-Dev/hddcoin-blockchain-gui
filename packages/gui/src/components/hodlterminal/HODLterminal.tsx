@@ -16,7 +16,7 @@ const clipboard = electron.clipboard;
 							
 const PY_MAC_DIST_FOLDER = '../../../app.asar.unpacked/daemon';
 const PY_WIN_DIST_FOLDER = '../../../app.asar.unpacked/daemon';
-const HODL_HELP_PATH = process.env[(process.platform === 'win32') ? 'USERPROFILE' : 'HOME'] + '/.hddcoin/mainnet/hodl/hodlhelp.txt';
+const HODL_HELP_PATH = process.env[(process.platform === 'win32') ? 'USERPROFILE' : 'HOME'] + '/.chia/mainnet/hodl/hodlhelp.txt';
 const fullPath = (existsSync((process.platform === 'win32') ? path.join(__dirname, PY_WIN_DIST_FOLDER) : path.join(__dirname, PY_MAC_DIST_FOLDER))) ? ((process.platform === 'win32') ? path.join(__dirname, PY_WIN_DIST_FOLDER) : path.join(__dirname, PY_MAC_DIST_FOLDER)) : path.join(__dirname, '../../../venv/bin');
 const ENV_HDDCOIN = ((process.platform === 'win32') ? '$env:Path += ";' : 'export PATH="$PATH:') + fullPath + '"';
 const SHELL = (process.platform === 'win32') ? 'powershell.exe' : 'bash';
@@ -62,7 +62,7 @@ const ptyProcess = pty.spawn(SHELL, [], {
 ptyProcess.write(ENV_HDDCOIN + '\r\n');
 ptyProcess.write('cd $home \r\n');
 ptyProcess.write('clear \r');
-ptyProcess.write('hddcoin hodl -h\r');
+ptyProcess.write('chia hodl -h\r');
 
 // Write data from ptyProcess to terminal
 ptyProcess.on('data', function(data) {

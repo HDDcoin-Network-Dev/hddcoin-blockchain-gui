@@ -7,6 +7,8 @@ import Block from '../block/Block';
 import DashboardSideBar from '../dashboard/DashboardSideBar';
 import Farm from '../farm/Farm';
 import FullNode from '../fullNode/FullNode';
+import HDDapps from '../hddapps/HDDapps';
+import HODLterminal from '../hodlterminal/HODLterminal';
 import NFTs from '../nfts/NFTs';
 import { CreateOffer } from '../offers/OfferManager';
 import Plot from '../plot/Plot';
@@ -15,7 +17,6 @@ import Settings from '../settings/Settings';
 import SettingsPanel from '../settings/SettingsPanel';
 import AppProviders from './AppProviders';
 import AppStatusHeader from './AppStatusHeader';
-import HDDapps from '../hddapps/HDDapps';
 
 export default function AppRouter() {
   const [mode] = useMode();
@@ -70,6 +71,7 @@ export default function AppRouter() {
               <Route path="dashboard/farm/*" element={<Farm />} />
               <Route path="dashboard/pool/*" element={<Pool />} />
               <Route path="dashboard/hddapps/*" element={<HDDapps />} />
+              <Route path="dashboard/hodlterminal/*" element={<HODLterminal />} />
             </Route>
           )}
         </Route>

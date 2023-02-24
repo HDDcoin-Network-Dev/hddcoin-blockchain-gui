@@ -8,6 +8,7 @@ import {
   Offers as OffersIcon,
   Tokens as TokensIcon,
   HDDapps as HDDappsIcon,
+  HDDappsHODLHero as HDDappsHODLHeroIcon,
   Settings as SettingsIcon,
 } from '@chia-network/icons';
 import { Trans } from '@lingui/macro';
@@ -111,6 +112,12 @@ export default function DashboardSideBar(props: DashboardSideBarProps) {
               icon={HDDappsIcon}
               title={<Trans>HDD Apps</Trans>}
               data-testid="DashboardSideBar-hddapps"
+            />
+            <SideBarItem
+              to="/dashboard/hodlterminal"
+              icon={HDDappsHODLHeroIcon}
+              title={<Trans>HODL Terminal</Trans>}
+              data-testid="DashboardSideBar-hodlterminal"
             />
           </>
         )}
