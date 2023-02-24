@@ -203,6 +203,13 @@ export default {
         test: /\.(gif|png|jpe?g|ico|icns)$/i,
         type: 'asset/resource',
       },
+      {
+        test: /\.node$/,
+        loader: 'node-loader',
+        options: {
+          name: "[path][name].[ext]",
+        },
+      },
     ],
   },
 };
