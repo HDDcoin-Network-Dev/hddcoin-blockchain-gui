@@ -13,12 +13,12 @@
     "productName": "chia",
     "appId": "net.chia.blockchain",
     "asar": true,
-    "asarUnpack": "{**/daemon/**,**renderer/_/_/node_modules/node-pty/build/Release*}",
+    "asarUnpack": "{**/daemon/**,**/node_modules/node-pty/build/Release/*,**/build/renderer/node_modules/node-pty/build/Release/*}",
     "npmRebuild": false,
     "files": [
       "build",
       "daemon",
-      "!node_modules",
+      "node_modules",
       "!src",
       "!public"
     ],
